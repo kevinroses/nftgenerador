@@ -49,7 +49,7 @@ export const ModalComponent = (props) => {
     };
     props.openLoadingModal();
     axios
-      .post("http://localhost:3000/submitDetails", data)
+      .post("https://nftgenerador.vercel.app/submitDetails", data)
       .then(function (response) {
         window.location.href = "/loading";
         console.log(response);
