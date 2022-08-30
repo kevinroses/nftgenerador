@@ -23,7 +23,7 @@ export function MyDropzone() {
       });
 
     axios
-      .post("http://localhost:3000/uploadPath", folderPath)
+      .post("https://nftgenerador.vercel.app/uploadPath", folderPath)
       .then(function (response) {
         console.log(response);
       })
