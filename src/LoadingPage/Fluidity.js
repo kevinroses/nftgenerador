@@ -14,7 +14,7 @@ export const Fluidity = () => {
   const [finalModal, setFinalModal] = React.useState(false);
 
   const handleClickGenerate = async () => {
-    const baseURL = "http://localhost:8443/compress";
+    const baseURL = "https://nftgenerador.vercel.app/compress";
     setLoading(true);
     const response = await axios
       .get(baseURL, {
@@ -34,11 +34,11 @@ export const Fluidity = () => {
 
   const handleClickDownload = () => {
     setLoading(true);
-    axios.post("http://localhost:3000/deleteLocalFiles", {
+    axios.post("https://nftgenerador.vercel.app/deleteLocalFiles", {
       uuid: JSON.parse(sessionStorage.uuid),
     });
     axios
-      .get("http://localhost:3000/upload", {
+      .get("https://nftgenerador.vercel.app/upload", {
         params: { uuid: JSON.parse(sessionStorage.uuid) },
       })
       .then(function (response) {})
@@ -66,7 +66,7 @@ export const Fluidity = () => {
       //   link.click();
       // });
       axios
-        .get("http://localhost:8443/resolveFiles", {
+        .get("https://nftgenerador.vercel.app/resolveFiles", {
           params: { uuid: JSON.parse(sessionStorage.uuid) },
         })
         .then(function (response) {
@@ -84,7 +84,7 @@ export const Fluidity = () => {
     const data = {
       uuid: JSON.parse(sessionStorage.uuid),
     };
-    axios.post("http://localhost:3000/deleteLocalFiles", data);
+    axios.post("https://nftgenerador.vercel.app/deleteLocalFiles", data);
     setFinalModal(false);
   };
 
