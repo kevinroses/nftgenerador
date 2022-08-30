@@ -27,7 +27,7 @@ export const ThreeData = () => {
     const ID = { uuid: uuidv4() };
     sessionStorage.setItem("uuid", JSON.stringify(ID.uuid));
 
-    axios.post("http://localhost:3000/saveID", ID);
+    axios.post("https://nftgenerador.vercel.app/saveID", ID);
 
     window.location.href = "/selection";
   };
