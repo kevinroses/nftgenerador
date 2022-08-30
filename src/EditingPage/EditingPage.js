@@ -16,7 +16,7 @@ export const NumberOfCopies = React.createContext();
 export const TreeContext = React.createContext();
 
 export const EditingPage = () => {
-  const baseURL = "http://localhost:3000/getFolderTree";
+  const baseURL = "https://nftgenerador.vercel.app/getFolderTree";
 
   const [fileData, setFileData] = React.useState(null);
 
